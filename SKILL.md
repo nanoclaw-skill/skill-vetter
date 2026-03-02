@@ -1,7 +1,8 @@
 ---
 name: skill-vetter
 version: 1.0.0
-description: "Multi-scanner security gate. Run this before installing any skill from ClawHub or external sources to detect malicious code, vulnerabilities, and suspicious patterns."
+user-invocable: true
+description: "Multi-scanner security gate. TRIGGER when: user mentions installing, adding, or reviewing a skill to Claude Code, OpenClaw, or any other AI agent. Detects malicious code, vulnerabilities, and suspicious patterns."
 ---
 
 # Skill Vetter
@@ -10,7 +11,7 @@ Security gate that runs multiple scanners against a skill before installation.
 
 ## When to Use
 
-Use before installing **ANY** skill from ClawHub, GitHub, or any external source.
+Use before installing **ANY** skill to Claude Code, OpenClaw, or your other favorite AI agent — whether from ClawHub, GitHub, or any external source.
 
 Ask the user: "Should I run skill-vetter on this before installing?" whenever they mention installing a new skill.
 

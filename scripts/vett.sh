@@ -61,7 +61,8 @@ scan_aguara() {
     
     if ! command -v aguara &>/dev/null; then
         append "⚠️  aguara not installed — skipping"
-        echo "                      ⚠️  SKIP (not installed)"
+        echo "                      ⚠️  SKIP — not installed"
+        echo "                         https://github.com/garagon/aguara"
         return 0
     fi
     
@@ -98,7 +99,8 @@ scan_skill_analyzer() {
     
     if ! command -v skill-scanner &>/dev/null; then
         append "⚠️  skill-scanner not installed — skipping"
-        echo "                      ⚠️  SKIP (not installed)"
+        echo "                      ⚠️  SKIP — not installed"
+        echo "                         https://pypi.org/project/cisco-ai-skill-scanner/"
         return 0
     fi
 
@@ -171,10 +173,9 @@ scan_structure() {
         ((issues++)) || true
     fi
     
-    # Check for README.md (should not exist per spec)
+    # Check for README.md (SKILL.md should be the primary doc)
     if [ -f "$SKILL_DIR/README.md" ]; then
-        append "⚠️  structure-check: README.md exists (should be removed per spec)"
-        ((WARNINGS++)) || true
+        append "ℹ️  structure-check: README.md exists (SKILL.md is the primary doc for agents)"
     fi
     
     # Check for dangerous commands in scripts and code
