@@ -1,4 +1,4 @@
-# Skill Vetter
+# Skill Vetter V2 For NanoClaw
 
 Multi-scanner security gate for AI agent skills. Run before installing any skill to Claude Code, OpenClaw, or your other favorite AI agent — whether from ClawHub, GitHub, or any external source.
 
